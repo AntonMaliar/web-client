@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Profile</title>
+</head>
+<body>
+	<h3 th:text="${'ID: '+user.getId()}"></h3>
+	<h3 th:text="${'Name: '+user.getName()}"></h3>
+	<h3 th:text="${'Surname: '+user.getSurname()}"></h3>
+	<h3 th:text="${'Age: '+user.getAge()}"></h3>
+	<hr>
+	<a th:href="@{{id}/change(id=${user.getId()})}">Change</a>
+	<br>
+	<a th:href="@{{id}/delete(id=${user.getId()})}">Delete</a>
+</body>
+</html>

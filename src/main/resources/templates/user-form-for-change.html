@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Change User</title>
+</head>
+<body>
+	<form action="change"  method="post">
+		<label for="name">input name:</label>
+		<input type="text" id="name" name="name" th:value="${user.getName()}">
+		<label for="surname">input surname:</label>
+		<input type="text" id="surname" name="surname" th:value="${user.getSurname()}">
+		<label for="age">input age:</label>
+		<input type="text" id="age" name="age" th:value="${user.getAge()}">
+		<input type="submit" value="update">
+	</form>
+</body>
+</html>
